@@ -1,0 +1,36 @@
+;-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+;DiCE DynamicDNS Client Plug-in
+;-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+[DiCE]
+Version=3.0
+
+[ServiceInfo]
+Name=Google Domains (IPv6)
+URL=https://domains.google/
+
+[Updater]
+Method=GET
+Script=http://<U>:<P>@domains.google.com/nic/update?hostname=<S>
+
+[Domains]
+
+[Options]
+
+[Response]
+1=good
+2=nochg
+10=badauth
+11=nohost
+
+[Command]
+
+[Messages]
+1=IPアドレスを更新しました
+2=IPアドレスは変更されませんでした
+10=認証情報が無効です
+11=指定されたホスト名が登録されていません
+
+[Help]
+IPv6で接続していれば、IPv6アドレスが登録されます。
+https://support.google.com/domains/answer/6147083?hl=ja
